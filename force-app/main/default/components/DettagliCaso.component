@@ -1,0 +1,90 @@
+<apex:component controller="DettaglioRichiestaController" access="global">
+    <apex:attribute name="recordId" type="Id" description="ID del record Caso__c" />
+<apex:outputText value="Record ID ricevuto: {!recordId}" />
+    <apex:form >
+        <div class="slds-scope slds-p-around_medium">
+            <div class="slds-card">
+                <div class="slds-card__header slds-grid">
+                    <header class="slds-media slds-media_center slds-has-flexi-truncate">
+                        <div class="slds-media__body">
+                            <h2 class="slds-card__header-title">Dettaglio Richiesta</h2>
+                        </div>
+                    </header>
+                </div>
+
+                <div class="slds-card__body">
+                    <div class="slds-grid slds-wrap">
+
+                        <!-- Colonna sinistra -->
+                        <div class="slds-col slds-size_1-of-2">
+                            <div class="slds-form-element slds-m-bottom_small">
+                                <label class="slds-form-element__label">Caso Name</label>
+                                <div class="slds-form-element__control">
+                                    <p class="slds-form-element__static">{!caso.Name}</p>
+                                </div>
+                            </div>
+
+                            <div class="slds-form-element slds-m-bottom_small">
+                                <label class="slds-form-element__label">Oggetto</label>
+                                <div class="slds-form-element__control">
+                                    <p class="slds-form-element__static">{!caso.Oggetto__c}</p>
+                                </div>
+                            </div>
+
+                            <div class="slds-form-element slds-m-bottom_small">
+                                <label class="slds-form-element__label">Data Inizio</label>
+                                <div class="slds-form-element__control">
+                                    <p class="slds-form-element__static">{!caso.Data_Inizio__c}</p>
+                                </div>
+                            </div>
+
+                            <div class="slds-form-element slds-m-bottom_small">
+                                <label class="slds-form-element__label">Descrizione</label>
+                                <div class="slds-form-element__control">
+                                    <p class="slds-form-element__static">{!caso.Descrizione__c}</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Colonna destra -->
+                        <div class="slds-col slds-size_1-of-2">
+                            <div class="slds-form-element slds-m-bottom_small">
+                                <label class="slds-form-element__label">Account ID</label>
+                                <div class="slds-form-element__control">
+                                    <p class="slds-form-element__static">{!caso.Account_ID__c}</p>
+                                </div>
+                            </div>
+
+                            <div class="slds-form-element slds-m-bottom_small">
+                                <label class="slds-form-element__label">Stato</label>
+                                <div class="slds-form-element__control">
+                                    <p class="slds-form-element__static">{!caso.Stato__c}</p>
+                                </div>
+                            </div>
+
+                            <div class="slds-form-element slds-m-bottom_small">
+                                <label class="slds-form-element__label">Data Fine</label>
+                                <div class="slds-form-element__control">
+                                    <p class="slds-form-element__static">{!caso.Data_Fine__c}</p>
+                                </div>
+                            </div>
+
+                            <!-- Campo editabile -->
+                            <div class="slds-form-element slds-m-bottom_small">
+                                <label class="slds-form-element__label" for="risposta">Risposta</label>
+                                <div class="slds-form-element__control">
+                                    <apex:inputTextarea value="{!caso.Risposta__c}" id="risposta" styleClass="slds-textarea" />
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Bottone salva -->
+                    <div class="slds-m-top_medium">
+                        <apex:commandButton value="Salva Risposta" action="{!salva}" styleClass="slds-button slds-button_brand" rerender=""/>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </apex:form>
+</apex:component>
