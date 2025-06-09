@@ -1,8 +1,27 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Package xmlns="http://soap.sforce.com/2006/04/metadata">
     <types>
+        <members>DettaglioRichiestaController</members>
+        <members>RispostaCasoHandler</members>
+        <name>ApexClass</name>
+    </types>
+    <types>
+        <members>DettagliCaso</members>
+        <members>HomeGestione</members>
+        <name>ApexComponent</name>
+    </types>
+    <types>
         <members>apexEmailNotifications</members>
         <name>ApexEmailNotifications</name>
+    </types>
+    <types>
+        <members>DettaglioCaso</members>
+        <members>GestioneCase</members>
+        <name>ApexPage</name>
+    </types>
+    <types>
+        <members>RispostaCasoTrigger</members>
+        <name>ApexTrigger</name>
     </types>
     <types>
         <members>AppSwitcher</members>
@@ -33,6 +52,7 @@
         <name>Community</name>
     </types>
     <types>
+        <members>Contact_Center</members>
         <members>standard__AllTabSet</members>
         <members>standard__AppLauncher</members>
         <members>standard__Approvals</members>
@@ -69,6 +89,15 @@
         <members>Case.PotentialLiability__c</members>
         <members>Case.Product__c</members>
         <members>Case.SLAViolation__c</members>
+        <members>Caso__c.Account_ID__c</members>
+        <members>Caso__c.Data_Fine__c</members>
+        <members>Caso__c.Data_Inizio__c</members>
+        <members>Caso__c.Descrizione__c</members>
+        <members>Caso__c.Id_Funzionario__c</members>
+        <members>Caso__c.Oggetto__c</members>
+        <members>Caso__c.Protocollazione__c</members>
+        <members>Caso__c.Risposta__c</members>
+        <members>Caso__c.Stato__c</members>
         <members>Contact.Languages__c</members>
         <members>Contact.Level__c</members>
         <members>Goal.OrigGoalId__c</members>
@@ -121,6 +150,7 @@
         <members>CaseContactRole</members>
         <members>CaseMilestone</members>
         <members>CaseRelatedIssue</members>
+        <members>Caso__c</members>
         <members>ChangeRequest</members>
         <members>ChangeRequestRelatedIssue</members>
         <members>ChangeRequestRelatedItem</members>
@@ -270,6 +300,15 @@
         <name>CustomObject</name>
     </types>
     <types>
+        <members>Caso__c-en_US</members>
+        <name>CustomObjectTranslation</name>
+    </types>
+    <types>
+        <members>Caso__c</members>
+        <members>Creazione_Case</members>
+        <name>CustomTab</name>
+    </types>
+    <types>
         <members>Contact.Standard_Rule_for_Contacts_with_Duplicate_Leads</members>
         <members>Lead.Standard_Rule_for_Leads_with_Duplicate_Contacts</members>
         <name>DuplicateRule</name>
@@ -307,8 +346,12 @@
         <name>EscalationRules</name>
     </types>
     <types>
+        <members>Contact_Center_UtilityBar</members>
+        <members>Creazione_Case</members>
         <members>DataGovernanceConsole_UtilityBar</members>
+        <members>Dettagli_Caso</members>
         <members>FlowsApp_UtilityBar</members>
+        <members>Gestione_Case</members>
         <members>LightningSalesConsole_UtilityBar</members>
         <members>LightningSales_UtilityBar</members>
         <members>LightningService_UtilityBar</members>
@@ -365,6 +408,7 @@
         <members>Case-Case Layout</members>
         <members>CaseClose-Close Case Layout</members>
         <members>CaseMilestone-Case Milestone Layout</members>
+        <members>Caso__c-Caso Layout</members>
         <members>CommunityMemberLayout-Community Member Layout</members>
         <members>ConsumptionRate-Consumption Rate Layout</members>
         <members>ConsumptionSchedule-Consumption Schedule Layout</members>
@@ -460,6 +504,10 @@
         <name>Layout</name>
     </types>
     <types>
+        <members>creazioneCase</members>
+        <name>LightningComponentBundle</name>
+    </types>
+    <types>
         <members>Account.AllAccounts</members>
         <members>Account.MyAccounts</members>
         <members>Account.NewLastWeek</members>
@@ -495,6 +543,7 @@
         <members>Case.AllOpenCases</members>
         <members>Case.MyCases</members>
         <members>Case.MyOpenCases</members>
+        <members>Caso__c.All</members>
         <members>ChangeRequest.AllChangeRequestsDefault</members>
         <members>CollaborationGroup.All_ChatterGroups</members>
         <members>CommSubscription.All_CommSubscriptions</members>
@@ -919,6 +968,7 @@
         <members>CalendarView</members>
         <members>Campaign</members>
         <members>Case</members>
+        <members>Caso__c</members>
         <members>ChangeRequest</members>
         <members>CleanLeadBackup</members>
         <members>CommSubscription</members>
@@ -1064,6 +1114,7 @@
         <members>Asset</members>
         <members>Campaign</members>
         <members>Case</members>
+        <members>Caso__c</members>
         <members>ChangeRequest</members>
         <members>Contact</members>
         <members>ContentDocument</members>
@@ -1095,6 +1146,15 @@
         <members>pt_BR</members>
         <members>zh_CN</members>
         <name>Translations</name>
+    </types>
+    <types>
+        <members>Risposta</members>
+        <name>UiFormatSpecificationSet</name>
+    </types>
+    <types>
+        <members>Creazione_Case</members>
+        <members>Dettagli_Caso</members>
+        <name>UiViewDefinition</name>
     </types>
     <types>
         <members>User.NoUsernameChangesAllowed</members>

@@ -1,5 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Translations xmlns="http://soap.sforce.com/2006/04/metadata">
+    <customApplications>
+        <label><!-- Contact Center --></label>
+        <name>Contact_Center</name>
+    </customApplications>
     <customLabels>
         <label><!-- tt_BaseURL --></label>
         <name>trlhdtips__tt_BaseURL</name>
@@ -36,6 +40,10 @@
         <label><!-- tt_ResetPasswordWarning --></label>
         <name>trlhdtips__tt_ResetPasswordWarning</name>
     </customLabels>
+    <customTabs>
+        <label><!-- Creazione Case --></label>
+        <name>Creazione_Case</name>
+    </customTabs>
     <flowDefinitions>
         <flows>
             <choices>

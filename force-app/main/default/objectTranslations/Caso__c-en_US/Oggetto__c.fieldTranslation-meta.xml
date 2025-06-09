@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <label><!-- Oggetto --></label>
+    <name>Oggetto__c</name>
+    <picklistValues>
+        <masterLabel>Assistenza Tecnica</masterLabel>
+        <translation><!-- Assistenza Tecnica --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Cambio Password</masterLabel>
+        <translation><!-- Cambio Password --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Cambio Piano / Offerta</masterLabel>
+        <translation><!-- Cambio Piano / Offerta --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Disdetta / Cancellazione</masterLabel>
+        <translation><!-- Disdetta / Cancellazione --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Documentazione</masterLabel>
+        <translation><!-- Documentazione --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Fatturazione / Pagamenti</masterLabel>
+        <translation><!-- Fatturazione / Pagamenti --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Feedback / Suggerimenti</masterLabel>
+        <translation><!-- Feedback / Suggerimenti --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Informazione Account</masterLabel>
+        <translation><!-- Informazione Account --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Modifica Dati Anagrafici</masterLabel>
+        <translation><!-- Modifica Dati Anagrafici --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Problemi Accesso</masterLabel>
+        <translation><!-- Problemi Accesso --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Reclamo Formale</masterLabel>
+        <translation><!-- Reclamo Formale --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Resi / Reclami</masterLabel>
+        <translation><!-- Resi / Reclami --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Spedizioni / Consegne</masterLabel>
+        <translation><!-- Spedizioni / Consegne --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Stato Pratica / Ordine</masterLabel>
+        <translation><!-- Stato Pratica / Ordine --></translation>
+    </picklistValues>
+</CustomFieldTranslation>
