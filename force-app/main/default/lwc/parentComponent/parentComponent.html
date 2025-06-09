@@ -1,6 +1,15 @@
 <template>
-    <lightning-button label="Open Modal" onclick={handleOpen}></lightning-button>
-    <c-modal-popup title="Conferma Azione" lwc:ref="popup">
-        <p>Sei sicuro di voler continuare?</p>
-    </c-modal-popup>
+    <div if:false={isCasoChiuso}>
+        <lightning-button label="Rispondi" onclick={handleOpen} ></lightning-button>
+        <c-modal-popup title="Risposta Case:{recordId}" lwc:ref="popup">
+            <div class="slds-grid slds-grid_align-end slds-p-right_medium slds-text-title_bold  ">
+                <lightning-record-edit-form object-api-name="Caso__c" onsuccess={handleSuccess}>
+                    <lightning-input-field field-name="Risposta__c"></lightning-input-field>
+                    <lightning-button-group>
+                        <lightning-button label="Salva Risposta" variant="brand" type="submit" onclick={salva}></lightning-button>
+                    </lightning-button-group>
+                </lightning-record-edit-form>
+            </div>
+        </c-modal-popup>
+    </div>
 </template>

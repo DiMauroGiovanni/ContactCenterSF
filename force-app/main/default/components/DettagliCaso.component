@@ -75,23 +75,36 @@
 
                             <!-- Campo editabile -->
                             <div class="slds-form-element slds-m-bottom_small">
-                                <label class="slds-form-element__label slds-text-title_bold " for="risposta">Risposta</label>
+                                <apex:outputLabel rendered="{!caso.Stato__c == 'Chiuso'}">
+                                    <label class="slds-form-element__label slds-text-title_bold " for="risposta" >Risposta</label>
+                                </apex:outputLabel>
                                 <div class="">
-                                    <apex:outputPanel rendered="{!caso.Stato__c != 'Chiuso'}">
-                                        <apex:inputTextarea value="{!caso.Risposta__c}" id="risposta" styleClass="slds-textarea" disabled="{!caso.Stato__c == 'Chiuso'}" style="resize: none;" />
-                                    </apex:outputPanel>
-                                    
                                     <apex:outputPanel rendered="{!caso.Stato__c == 'Chiuso'}">
                                         <p class="slds-form-element__static">{!caso.Risposta__c}</p>
+                                    </apex:outputPanel>
+                                    <apex:outputPanel rendered="{!caso.Stato__c != 'Chiuso'}">
+                                        <div >
+                                            <apex:includeLightning/>
+                                            <div id="modalContainer"></div>
+                                            <script>
+                                                $Lightning.use("c:popUpAura", // Namespace se presente
+                                                    function() {
+                                                        $Lightning.createComponent(
+                                                            "c:parentComponent",
+                                                            {
+                                                                recordId: '{!caso.Id}',
+                                                                stato: '{!caso.Stato__c}'
+                                                            },
+                                                            "modalContainer"
+                                                        );
+                                                    }
+                                                );
+                                            </script>
+                                        </div>
                                     </apex:outputPanel>
                                 </div>
                             </div>
                         </div>
-                    </div>
-
-                     <!-- Bottone salva -->
-                    <div class="slds-grid slds-grid_align-end slds-p-right_medium slds-text-title_bold  ">
-                        <apex:commandButton value="Salva Risposta" action="{!salva}" styleClass="slds-button slds-button_brand" rendered="{!caso.Stato__c != 'Chiuso'}" />
                     </div>
                 </div>
             </div>
